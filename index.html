@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    is  very  {{name}} {{age}}
+    {{showName()}}
+ <br>
+    {{showAge()}}
+    <br>
+    {{contAG(90)}}
+</div>
+
+</body>
+</html>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            name: 'shaker',
+            age:'21',
+        },
+        methods:{
+            showName(){
+                return 'is  shaker'
+            },
+            showAge(){
+                return this.name;
+            },
+            contAG(con){
+                return 'is  count '+ con;
+            },
+        }
+    })
+</script>
